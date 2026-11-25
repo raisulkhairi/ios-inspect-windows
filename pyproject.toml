@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ios-inspect-windows"
+version = "0.1.0"
+description = "Debug Safari & WKWebView on iPhone from Windows: console, network, elements. No Mac needed."
+readme = "README.md"
+license = "GPL-3.0-or-later"
+requires-python = ">=3.9"
+dependencies = ["pymobiledevice3>=11.63"]
+keywords = ["ios", "safari", "webkit", "devtools", "web-inspector", "windows", "debugging"]
+classifiers = [
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Debuggers",
+]
+
+[project.urls]
+Homepage = "https://github.com/raisulkhairi/ios-inspect-windows"
+Issues = "https://github.com/raisulkhairi/ios-inspect-windows/issues"
+
+[project.scripts]
+ios-inspect = "ios_inspect.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
